@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Canciones de Iván Cornejo</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #1c1c1c;
+      color: #f0f0f0;
+      text-align: center;
+      padding: 20px;
+    }
+    h1 {
+      color: #f39c12;
+    }
+    button {
+      background-color: #f39c12;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      margin: 10px;
+    }
+    button:hover {
+      background-color: #e67e22;
+    }
+  </style>
+</head>
+<body>
+  <h1>Canciones de Iván Cornejo</h1>
+  <p>Haz clic en el botón para reproducir una canción al azar:</p>
+  <button id="reproducir">Reproducir Canción</button>
+
+  <script>
+    const canciones = [
+      "https://www.youtube.com/watch?v=XdKIky0Dn6I&pp=ygUMaXZhbiBjb3JuZWpv",
+      "https://www.youtube.com/watch?v=3aRjKqkGTlY&pp=ygUMaXZhbiBjb3JuZWpv",
+      "https://www.youtube.com/watch?v=F5a13sbMiOE&pp=ygUMaXZhbiBjb3JuZWpv",
+      "https://www.youtube.com/watch?v=-9jqon6CpFg&pp=ygUMaXZhbiBjb3JuZWpv",
+      "https://www.youtube.com/watch?v=_5GP_JNeF80&pp=ygUMaXZhbiBjb3JuZWpv"
+    ];
+
+    document.getElementById("reproducir").addEventListener("click", function() {
+      const cancion = canciones[Math.floor(Math.random() * canciones.length)];
+      window.open(cancion, "_blank");
+    });
+  </script>
+</body>
+</html>
